@@ -1,0 +1,30 @@
+attempts=0
+num = 0
+start=0
+
+#def enternum(text):
+# num=int(raw_input(text))
+# if num >100:
+#  print("Number should not be >100")
+#  enternum("Enter number between 0 and 100 one more time : ")
+# else: 
+#  print ("guess the number")
+#  return num
+
+def guessnum(text):
+  confirmation = str(raw_input(text))
+  while flag==0
+   if confirmation =="y":
+    print ("Congrats! You have guessed the number !!!!")
+    flag=1
+    print ("You have used " + str(attempts))
+   else
+    attempts=attempts+1
+    print "Failed attempts so far " + str(attempts)
+   
+guessnum("Enter 'y' if guessed and 'n' if not")
+
+# print "Guessed number is "+str(num)
+#num=enternum("Guess the numeric I have chosen between 0 and 100 : ")
+#print num
+
