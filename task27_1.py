@@ -35,7 +35,31 @@ def checkmoves(list1,list2,list3):
     if k in list2 and k in list3:
      print "Winner is player "+ str(winner)+ " !!!"
      raise SystemExit
-   
+    if len(set(list1))==1: 
+     print "Winner is player "+ str(winner)+ " !!!"
+     raise SystemExit
+
+  for k in list2:
+   if k <> '':
+    if k==0:
+     winner=1 
+    else: 
+     winner=2
+    if len(set(list2))==1: 
+     print "Winner is player "+ str(winner)+ " !!!"
+     raise SystemExit
+
+  for k in list3: 
+   if k <> '':
+    if k==0:
+     winner=1 
+    else: 
+     winner=2
+    if len(set(list3))==1: 
+     print "Winner is player "+ str(winner)+ " !!!"
+     raise SystemExit
+
+
 #  if list1[0]<>'' and str(list1[0])==str(list1[1]) and str(list1[1])==str(list1[2]):
 #     if str(list1[0])=='1':
 #      print "Winner is player2 !!!"
