@@ -25,6 +25,7 @@ player1=1
 player2=0
 
 def checkmoves(list1,list2,list3):
+  # Match lists and find if same position items in lists are the same (check by vertical)
   global k
   for k in list1:
    if k <> '':
@@ -35,10 +36,13 @@ def checkmoves(list1,list2,list3):
     if k in list2 and k in list3:
      print "Winner is player "+ str(winner)+ " !!!"
      raise SystemExit
+
+# Check winner if All items in list1 are filled with values   
     if len(set(list1))==1: 
      print "Winner is player "+ str(winner)+ " !!!"
      raise SystemExit
 
+# Check winner if All items in list2 are filled with values
   for k in list2:
    if k <> '':
     if k==0:
@@ -49,6 +53,7 @@ def checkmoves(list1,list2,list3):
      print "Winner is player "+ str(winner)+ " !!!"
      raise SystemExit
 
+# Check winner if All items in list3 are filled with values
   for k in list3: 
    if k <> '':
     if k==0:
@@ -58,6 +63,21 @@ def checkmoves(list1,list2,list3):
     if len(set(list3))==1: 
      print "Winner is player "+ str(winner)+ " !!!"
      raise SystemExit
+
+#Check winner by diagonal
+  if list1[0]<>''and list2[1]<>'' and list3[2]<>'':
+   if str(list1[0])==str(list2[1]) and str(list2[1])==str(list3[2]):
+      if str(list1[0])=='1':
+       print "Winner is player2 !!!"
+      else:
+       print "Winner is player1 !!!"
+  if list3[0]<>'' and list2[1]<>'' and list1[2]<>'':      
+   if str(list3[0])==str(list2[1]) and str(list2[1])==str(list1[2]):
+      if str(list3[0])=='1':
+       print "Winner is player2 !!!"
+      else:
+       print "Winner is player1 !!!"      
+
 
 
 #  if list1[0]<>'' and str(list1[0])==str(list1[1]) and str(list1[1])==str(list1[2]):
