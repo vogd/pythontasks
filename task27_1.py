@@ -1,6 +1,5 @@
 from random import randrange
 
-i=0
 n=0
 k=0
 symbol=0
@@ -9,9 +8,6 @@ coordlist=[]
 list1=[]
 list2=[]
 list3=[]
-available1=[]
-available2=[]
-available3=[]
 winner=0
 
 def generatelist(listname):
@@ -77,34 +73,6 @@ def checkmoves(list1,list2,list3):
        print "Winner is player2 !!!"
       else:
        print "Winner is player1 !!!"      
-
-
-
-#  if list1[0]<>'' and str(list1[0])==str(list1[1]) and str(list1[1])==str(list1[2]):
-#     if str(list1[0])=='1':
-#      print "Winner is player2 !!!"
-#     else:
-#      print "Winner is player1 !!!"
-#   if list2[0]<>'' and str(list2[0])==str(list2[1]) and str(list2[1])==str(list2[2]):
-#     if str(list2[0])=='1':
-#      print "Winner is player2 !!!"
-#     else:
-#      print "Winner is player1 !!!"
-#   if list3[0]<>'' and str(list3[0])==str(list3[1]) and str(list3[1])==str(list3[2]):
-#     if str(list3[0])=='1':
-#      print "Winner is player2 !!!"
-#     else:
-#      print "Winner is player1 !!!"
-#   if list1[0]<>'' and str(list1[0])==str(list2[1]) and str(list2[1])==str(list3[2]):
-#     if str(list1[0])=='1':
-#      print "Winner is player2 !!!"
-#     else:
-#      print "Winner is player1 !!!"
-#   if list3[0]<>'' and str(list3[0])==str(list2[1]) and str(list2[1])==str(list1[2]):
-#     if str(list3[0])=='1':
-#      print "Winner is player2 !!!"
-#     else:
-#      print "Winner is player1 !!!"      
     
 def readmove(player):
  coord=raw_input("Input player "+str(player)+" move coordinates x,y : ")
@@ -159,5 +127,3 @@ while n<=3:
   checkmoves(list1,list2,list3)
   readmove(2)
   checkmoves(list1,list2,list3)
-
-#checklist (list1,available1)
